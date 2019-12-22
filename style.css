@@ -70,7 +70,6 @@ header {
 
 .btn {
   border: none;
-  background-color: hsl(360, 91%, 36%);
   border-radius: 25px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
     0px;
@@ -84,6 +83,16 @@ header {
   cursor: pointer;
 }
 
+#generate {
+  background-color: hsl(360, 91%, 36%);
+  float: left;
+}
+
+#clipboard {
+  background-color: hsl(300, 1%, 64%);
+  float: right;
+}
+
 button[disabled] {
   cursor: default;
   background: #c0c7cf;
@@ -93,7 +102,7 @@ button[disabled] {
   float: right;
 }
 
-#password {
+#result {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -121,7 +130,7 @@ button[disabled] {
     padding: 10px 15px;
   }
 
-  #password {
+  #result {
     font-size: 1rem;
   }
 }
