@@ -10,7 +10,7 @@ Directions:
 1. Select desired password length (must be between 8 and 128 characters)  
 2. Select the character types used to generate the password  
 3. Click the "Generate Password" button  
-4. Click the "Copy to clipboard" button to copy the password  
+4. Click the "Copy to Clipboard" button to copy the password  
 
 Project files:  
 
