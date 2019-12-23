@@ -4,7 +4,7 @@ Description:
 
 This is an application that generates a password based on user-selected criteria. HTML, CSS, and Javascript were used to build this.  
 
-Password Generator_Screenshot.png  
+![Password Generator Screenshot](Password-Generator_Screenshot.png)  
 
 Directions:  
 1. Select desired password length (must be between 8 and 128 characters)  
@@ -19,7 +19,7 @@ Project files:
     script.js  
 
 Prerequisites:  
-Browser that supports html5
+Browser that supports HTML5
 
 Deployment:  
 Download Repository  
@@ -27,7 +27,7 @@ Open index.html in browser
 
 Built with:  
 Visual Studio Code  
-html  
+HTML  
 CSS  
 Javascript 
 
