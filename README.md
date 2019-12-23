@@ -6,7 +6,7 @@ This is an application that generates a password based on user-selected criteria
 
 ![Password Generator Screenshot](Password-Generator_Screenshot.png)  
 
-Directions:  
+How to use the application:  
 1. Select password length (must be between 8 and 128 characters)  
 2. Select the desired character types  
 3. Click the "Generate Password" button; password will populate    
@@ -17,6 +17,9 @@ Project files:
     index.html  
     style.css  
     script.js  
+
+Github Pages URL:  
+https://ilanashaffer.github.io/Homework-3/
 
 Prerequisites:  
 Browser that supports HTML5
