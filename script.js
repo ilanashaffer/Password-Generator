@@ -1,5 +1,3 @@
-// DOM elements
-
 const resultEl = document.getElementById('result');
 const lengthEl = document.getElementById('length');
 const uppercaseEl = document.getElementById('uppercase');
@@ -16,9 +14,6 @@ const randomFunc = {
     symbol: getRandomSymbol
 }
 
-
-// Generate events
-
 generateEl.addEventListener('click', () => {
     const length = +lengthEl.value;
     const hasLower = lowercaseEl.checked;
@@ -26,22 +21,21 @@ generateEl.addEventListener('click', () => {
     const hasNumbers = numbersEl.checked;
     const hasSymbols = symbolsEl.checked;
 
-    resultEl.innerText = generatePassword(
+    resultEl.textContent = generatePassword(
         hasLower,
         hasUpper,
         hasNumbers,
         hasSymbols,
         length
     );
+    
 });
-
-// Copy password to clipboard
 
 clipboardEl.addEventListener('click', () => {
     const textarea = document.createElement('textarea');
-    const password = resultEl.innerText;
+    const password = resultEl.textContent;
 
-    if (!password) {
+    if (!password || password === ' ') {
         return;
     }
 
@@ -53,31 +47,30 @@ clipboardEl.addEventListener('click', () => {
     alert('Password copied to clipboard.');
 });
 
-// Generate password function
-
 function generatePassword(lower, upper, number, symbol, length) {
 
     let generatedPassword = '';
 
     const typesCount = lower + upper + number + symbol;
 
-    // console.log('typesCount: ', typesCount);
-
     const typesArr = [{ lower }, { upper }, { number }, { symbol }].filter
         (
             item => Object.values(item)[0]
         );
 
-    // console.log('typesArr: ', typesArr);
-
     if (typesCount === 0) {
-        return '';
+        alert('At least one character type needs to be selected.');
+        return;
+    }
+
+    if (length < 8 || length > 128) {
+        alert('Password length must be between 8 and 128 characters.');
+        return;
     }
 
     for (let i = 0; i < length; i += typesCount) {
         typesArr.forEach(type => {
             const funcName = Object.keys(type)[0];
-            // console.log('funcName: ', funcName);
 
             generatedPassword += randomFunc[funcName]();
         });
@@ -87,9 +80,6 @@ function generatePassword(lower, upper, number, symbol, length) {
 
     return finalPassword;
 }
-
-
-// Generator functions
 
 function getRandomLower() {
     return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
@@ -104,6 +94,6 @@ function getRandomNumber() {
 }
 
 function getRandomSymbol() {
-    const symbols = '!@#$%^&*(){}[]=<>/,.';
+    const symbols = ' !"#$%&\'()*+,-./:;<=>?@[\]^_`{|}~';
     return symbols[Math.floor(Math.random() * symbols.length)];
 }

@@ -68,6 +68,13 @@ header {
   clear: both;
 }
 
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button {  
+
+   opacity: 1;
+
+}
+
 .btn {
   border: none;
   border-radius: 25px;
