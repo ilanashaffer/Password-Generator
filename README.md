@@ -1,4 +1,4 @@
-Homework 3: Password Generator  
+Password Generator  
 
 Description:  
 
@@ -19,14 +19,8 @@ Project files:
     script.js  
 
 Github Pages URL:  
-https://ilanashaffer.github.io/Homework-3/
+https://ilanashaffer.github.io/Password-Generator
 
-Prerequisites:  
-Browser that supports HTML5
-
-Deployment:  
-Download Repository  
-Open index.html in browser
 
 Built with:  
 Visual Studio Code  
@@ -36,6 +30,3 @@ Javascript
 
 Authors:  
 Ilana Shaffer
-
-Acknowledgments:  
-University of Denver - Bootcamp Spot Assignment
